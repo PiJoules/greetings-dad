@@ -10,18 +10,9 @@
 
 <script src="http://jeromeetienne.github.io/tquery/plugins/shape/tquery.shape.create.js"></script>
 <body><script>
-    var world	= tQuery.createWorld().boilerplate().start();
+    var world = tQuery.createWorld().boilerplate().start();
 
     tQuery.createText("Greetings").scaleBy(1/4).addTo(world).position(0,0.7,0);
-    tQuery.createText("To mai bialogical maternal guardian").scaleBy(1/10).addTo(world).position(0,-0.5,0);
-
-    shape	= tQuery.createHeartShape();
-    shape.extrude().toMesh().id('obj').addTo(world);
-
-    tQuery('#obj')
-        .geometry().computeAll().normalize().center().rotateZ(Math.PI).back();
-
-    tQuery.world.hook(function(delta){
-        tQuery('#obj').rotateY(90 * delta * Math.PI / 180);
-    });
+    tQuery.createText("Heyy lmao").scaleBy(1/2).addTo(world).position(0,0.2,0);
+    tQuery.createText("Happy Father's Day").scaleBy(1/10).addTo(world).position(0,-0.5,0);
 </script></body>
